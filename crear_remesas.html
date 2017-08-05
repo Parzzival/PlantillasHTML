@@ -181,7 +181,7 @@
                 <div class="box-header with-border">
                     <h3 class="box-title">Lista de remesas</h3>
                 </div>
-                <form role="form" name="search" action="" class="form-horizontal">
+                <div id="search" class="form-horizontal">
                   <div class="box-body">
                           <div class="col-md-9">
                             <div class="panel-page">
@@ -220,8 +220,9 @@
                                   <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
                                       <a href="#" class="btn btn-default"><i class="fa fa-arrow-left" aria-hidden="true"></i>
- Regresar a la lista</a>
-                                      <button type="submit" class="btn btn-success">
+                                        Regresar a la lista
+                                      </a>
+                                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                                       <i class="fa fa-plus" aria-hidden="true"></i> Generar remesa</button>
                                     </div>
                                   </div>
@@ -235,12 +236,49 @@
                           </div>
                         </div>
                   
-                </form>
+                </div>
               </div>
           </div>
       </div>
     </section>
     <!-- /.FIN DE CONTENIDO -->
+    <!-- INICIO DE MODAL -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Confirmación de remesa</h4>
+            </div>
+            <div class="modal-body">
+              
+              <div class="form-group">
+                <label>Encargado de remesa:</label>
+                <div class="input-group">
+                  Alex Rubén Aragon Calixto
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Monto Total:</label>
+                <div class="input-group">
+                  S/. 2000.00
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Confirmar Contranseña:</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" placeholder="Ingrese contraseña">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Confirmar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- FIN DE MODAL -->
   </div>
   <!-- /.FIN DE CONTENEDOR DE FORMULARIO  -->
   <footer class="main-footer">

@@ -70,11 +70,11 @@
 	margin-right: 10px;
 }
 .search-actions{
-	padding: 25px;
+	padding-top: 25px;
 }
 /* Alertas */
 .alert-success {
     color: #3c763d !important;
-    background-color: #dff0d8;
+    background-color: #dff0d8 !important;
     border-color: #d6e9c6 !important;
 }

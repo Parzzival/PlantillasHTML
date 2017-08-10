@@ -163,13 +163,13 @@
     <!-- HEADER INFO PAGE UBICACION -->
     <section class="content-header">
       <h1>
-        Registrar Ingreso
+        Registrar pago de ingreso
         <small>Modúlo de facturación</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li>Modúlo de facturación</li>
-        <li class="active">Registrar Ingreso</li>
+        <li class="active">Registrar pago de ingreso</li>
       </ol>
     </section>
      <!-- FIN DE INFO PAGE UBICACION -->
@@ -179,12 +179,14 @@
           <div class="col-md-12">
               <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Registrar nuevo Ingreso</h3>
+                    <h3 class="box-title">Registrar pago de ingreso</h3>
                 </div>
-                <form role="form" name="search" action="" class="form-horizontal">
-                  <div class="box-body">
-                          <div class="col-md-8">
-                            <div class="form-group">
+                <div class="box-body">
+                  <div class="col-md-9">
+                    <div class="panel-page">
+                      <div class="toolbar-search">
+                        <form role="form" name="search" action="" class="form-horizontal">
+                          <div class="form-group">
                               <label class="col-sm-3 control-label">Criterio de Búsqueda</label>
                               <div class="col-sm-9">
                                 <div class="radio">
@@ -207,56 +209,83 @@
                                 <div class="input-group">
                                   <input id="nombre" class="form-control" type="text" placeholder="Escriba el DNI o Apellido a buscar">
                                     <span class="input-group-btn">
-                                      
                                       <button type="button" class="btn btn-success">
                                       <i class="fa fa-plus" aria-hidden="true"></i> Asignar</button>
-                                      <button type="button" class="btn btn-danger">
-                                      <i class="fa fa-trash-o" aria-hidden="true"></i> Quitar</button>
                                   </span>
                                 </div>
                               </div>
                             </div>
                             
-                            <div class="form-group">
-                              <label class="col-sm-3 control-label">Periodo</label>
-                              <div class="col-sm-9">
-                                  <select id="producto" class="form-control">
-                                      <option>Seleccionar un periodo</option>
-                                      <option>2016</option>
-                                      <option>2017</option>
-                                      <option>2018</option>
-                                  </select>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i> Buscar deudas</button>
-                              </div>
-                            </div>
-                            <div class="panel-body">
+                        </form>
+                      </div>
+                      <div class="panel-body">
                                 <table class="table table-hover">
                                   <tr class="table-header">
+                                    <th class="text-center">Acciones</th>
                                     <th>ID</th>
                                     <th>Descripción Producto</th>
-                                    <th>Sub Total S/.</th>
-                                    <th class="text-center">Acciones</th>
+                                    <th>Monto Total</th>
+                                    <th>Pago Completo</th>
+                                    <th>Pago en Abonos</th>
                                   </tr>
+
                                   <tr>
+                                    <td>
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="1">
+                                        </label>
+                                      </div>
+                                    </td>
                                     <td>183</td>
                                     <td>Matricula</td>
                                     <td>S/ 250.00</td>
                                     <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>
                                       <div class="checkbox">
                                         <label>
                                           <input type="checkbox" value="1">
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
                                     <td>184</td>
-                                    <td>Pension Abril</td>
+                                    <td>Pensión de Abril</td>
                                     <td>S/ 250.00</td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
                                     <td>
                                       <div class="checkbox">
                                         <label>
@@ -264,11 +293,27 @@
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
                                     <td>185</td>
-                                    <td>Pension Marzo</td>
+                                    <td>Pension de Mayo</td>
                                     <td>S/ 250.00</td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
                                     <td>
                                       <div class="checkbox">
                                         <label>
@@ -276,11 +321,27 @@
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
-                                    <td>185</td>
-                                    <td>Pension Junio</td>
+                                    <td>186</td>
+                                    <td>Pension de Junio</td>
                                     <td>S/ 250.00</td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
                                     <td>
                                       <div class="checkbox">
                                         <label>
@@ -288,79 +349,122 @@
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
-                                    <td>185</td>
+                                    <td>187</td>
                                     <td>Pension Julio</td>
                                     <td>S/ 250.00</td>
                                     <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
                                       <div class="checkbox">
                                         <label>
                                           <input type="checkbox" value="1">
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
                                     <td>185</td>
                                     <td>Pension Agosto</td>
                                     <td>S/ 250.00</td>
                                     <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
                                       <div class="checkbox">
                                         <label>
                                           <input type="checkbox" value="1">
                                         </label>
                                       </div>
                                     </td>
+                                    <td>187</td>
+                                    <td>Pension Agosto</td>
+                                    <td>S/ 250.00</td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
+                                        </label>
+                                      </div>
+                                    </td>
                                   </tr>
+
                                   <tr>
-                                    <td>185</td>
+                                    <td>
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="1">
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>188</td>
                                     <td>Pension Setiembre</td>
                                     <td>S/ 250.00</td>
                                     <td>
-                                      <div class="checkbox">
+                                      <div class="radio">
                                         <label>
-                                          <input type="checkbox" value="1">
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
                                         </label>
                                       </div>
                                     </td>
-                                  </tr>
-                                  <tr>
-                                    <td>185</td>
-                                    <td>Pension Octubre</td>
-                                    <td>S/ 250.00</td>
                                     <td>
-                                      <div class="checkbox">
+                                      <div class="radio">
                                         <label>
-                                          <input type="checkbox" value="1">
+                                          <input type="radio" name="optionsRadios" id="option01" value="option1" checked>
+                                          <input type="text" class="form-control" placeholder="Ingresar monto">
                                         </label>
                                       </div>
                                     </td>
                                   </tr>
-                                  <tr>
-                                    <td>185</td>
-                                    <td>Pension Noviembre</td>
-                                    <td>S/ 250.00</td>
-                                    <td>
-                                      <div class="checkbox">
-                                        <label>
-                                          <input type="checkbox" value="1">
-                                        </label>
-                                      </div>
-                                    </td>
-                                  </tr>
+
                                    <tr>
-                                    <td colspan="2" class="table-bold-print">Sub Total</td>
+                                    <td colspan="5" class="table-bold-print">Sub Total</td>
                                     <td class="table-price-print">S/.25000</td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td colspan="2" class="table-bold-print">Descuento</td>
+                                    <td colspan="5" class="table-bold-print">Descuento</td>
                                     <td class="table-price-print">S/.0.00</td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td colspan="2" class="table-bold-print">Total</td>
+                                    <td colspan="5" class="table-bold-print">Total</td>
                                     <td class="table-price-print">S/.25000</td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -375,13 +479,12 @@
                                 </div>
                                 </div>
                             </div>
-                          </div>
-                          <div class="col-md-4">
-                              
-                          </div>
-                        </div>
-                  
-                </form>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+
+                  </div>
+                </div>
               </div>
           </div>
       </div>

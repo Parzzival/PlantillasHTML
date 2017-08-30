@@ -89,3 +89,10 @@
 	display: block;
 	width: 100%;
 }
+.forgot-password{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.checkbox.incheck{
+	margin-top: 0;
+}

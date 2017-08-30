@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ejemplo Select2</title>
+  <title>Registrar Ingreso</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -160,7 +160,7 @@
     <!-- HEADER INFO PAGE UBICACION -->
     <section class="content-header">
       <h1>
-        Ejemplo Select 2
+        Ejemplo Select2
         <small>Modúlo de facturación</small>
       </h1>
       <ol class="breadcrumb">
@@ -176,138 +176,25 @@
           <div class="col-md-12">
               <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Lista de pagos realizados</h3>
+                    <h3 class="box-title">Ejemplo de Select 2</h3>
                 </div>
                 <div class="toolbar-search">
-                    <div class="box-body">
-                        <form role="form" name="search" class="form-horizontal">
-                         
-                          <div class="col-md-5">
-                            <div class="form-group">
-                              <label for="inputEmail3" class="col-sm-4 control-label">Alumno</label>
-                                <div class="col-sm-8">
-                                 <input type="text" class="form-control" id="txtNombre" placeholder="Escribir un Nombre">
-                                </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-4">
-                          
-                              
-                                  <div class="form-group">
-                                    <label class="col-sm-2">Tipo</label>
-                                    <div class="col-sm-10">
-                                    <select class="form-control">
-                                    
-                                      <option>Todos</option>
-                                      <option>Pagados</option>
-                                      <option>No Pagados</option>
-                                    
-                                    </select>
-                                    </div>
-                                    
-                                  </div>   
-                                              
-                            </div>
-                              <div class="col-md-3">
-                            <button type="button" class="btn btn-primary">
-                              <span class="glyphicon glyphicon-search"></span>
-                            Buscar
-                            </button>
-
-                              </div>
-
-                          </div>
-                        </form>
-                    
-                </div>
-
-                <form role="form" name="search" class="form-horizontal">
-                    <div class="box-body">
-
-
+                  <div class="box-body">
+                      <!-- Empieza el Select 2 -->
+                      <div class="form-group">
+                        <label>Colegio</label>
+                        <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">------</option>
+                          <option>Alaska</option>
+                          <option>Arisona</option>
+                          <option>Delaware</option>
+                          <option>Tennessee</option>
+                          <option>Agusto</option>
+                          <option>Washington</option>
+                        </select>
                       </div>
-                </form>
-                <!-- Muestra deudas -->
-                <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
-                <tbody><tr>
-                  <th>ID</th>
-                  <th>Descripción</th>
-                  <th>Fecha</th>
-                  <th>Pendiente S/.</th>
-                  <th>Abonado S/.</th>
-                  <th>Total Pagado S/.</th>
-                  <th>Estado</th>
-                  <th>Comentario</th>
-                  <th width="100">Acciones</th>
-                </tr>
-                <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
-                  <td>S/ 0.00</td>
-                  <td>S/ 0.00</td>
-                  <td>S/ 250.00</td>
-                  <td><span class="label label-success">Cancelado</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>
-                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                      <a href="#" class="btn btn-default" title="Editar Deuda"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                      <a href="#" class="btn btn-default" title="Eliminar deuda"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td>S/ 1.00</td>
-                  <td>S/ 1.50</td>
-                  <td>S/ 150.00</td>
-                  <td><span class="label label-warning">Pendiente</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>
-                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                      <a href="#" class="btn btn-default" title="Editar Deuda"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                      <a href="#" class="btn btn-default" title="Eliminar deuda"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td>S/ 0.00</td>
-                  <td>S/ 0.00</td>
-                  <td>S/ 250.00</td>
-                  <td><span class="label label-success">Cancelado</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>
-                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                      <a href="#" class="btn btn-default" title="Editar Deuda"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                      <a href="#" class="btn btn-default" title="Eliminar deuda"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td>S/ 250.00</td>
-                  <td>S/ 0.00</td>
-                  <td>S/ 0.00</td>
-                  <td><span class="label label-danger">No Cancelado</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>
-                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                        <a href="#" class="btn btn-default" title="Editar Deuda"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        <a href="#" class="btn btn-default" title="Eliminar deuda"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody></table>
-            </div>
+                      <!-- Termina el Select 2 -->
+                  </div>
               </div>
           </div>
       </div>
@@ -331,42 +218,17 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="bower_components/raphael/raphael.min.js"></script>
-<script src="bower_components/morris.js/morris.min.js"></script>
 <!-- Sparkline -->
-<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="bower_components/moment/min/moment.min.js"></script>
-<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/select2/dist/js/select2.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 
-<script>
-    $(function () {
-      //Date range picker
-    $('#rangofecha').daterangepicker()
-
-
+<script type="text/javascript">
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2();
   });
 </script>
 </body>
